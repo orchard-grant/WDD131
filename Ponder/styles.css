@@ -1,0 +1,30 @@
+body {
+    background-color: lightgray;
+    text-align: center;
+}
+
+p {
+    color: #04609d;
+    font-size: 18px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: #04609d;
+  width: 50%;
+  margin: 20px auto;
+}
+
+img {
+    height: 100px;
+    width: 350px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 320px;
+  text-align: left;
+}
