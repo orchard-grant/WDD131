@@ -12,8 +12,8 @@
 <body>
     <header>
         <h1>Cool Pics 📷</h1>
-        <button>Menu</button>
-        <nav>
+        <button id="menuButton" aria-expanded="false" aria-controls="menu">Menu</button>
+        <nav class="menu hide">
             <a href="#">Home</a>
             <a href="#">People</a>
             <a href="#">Places</a>
@@ -52,6 +52,10 @@
                 <img src="norris-sm.jpeg" alt="picture">
             </figure>
         </section>
+            <dialog class="viewer">
+            <button class="close-viewer">X</button>
+        <img alt="">
+        </dialog>
     </main>
     <footer>
         ©2023 Not a real site 😀
