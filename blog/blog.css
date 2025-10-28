@@ -1,5 +1,3 @@
-/* simple, beginner-style css */
-
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -46,7 +44,6 @@ main {
   padding: 0 16px;
 }
 
-/* nav grid (keep as-is) */
 header nav ul {
   display: grid;
   grid-auto-flow: column;
@@ -59,7 +56,6 @@ header nav ul {
 }
 header nav a { display: block; text-align: center; }
 
-/* placeholder sidebar */
 .filters {
   border: 1px solid #EFC69B;
   min-height: 420px;
@@ -67,7 +63,6 @@ header nav a { display: block; text-align: center; }
 }
 .filters p { margin: 0; color: #666; }
 
-/* page grid (keep as-is) */
 @media (min-width: 900px) {
   body {
     display: grid;
@@ -79,7 +74,6 @@ header nav a { display: block; text-align: center; }
   .filters { grid-column: 2; }
 }
 
-/* article grid (keep as-is) */
 .post {
   display: grid;
   grid-template-columns: 160px 1fr;
@@ -94,4 +88,36 @@ header nav a { display: block; text-align: center; }
   height: auto;
   display: block;
   margin: 8px 0;
+}
+
+.post-meta .date {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.post-meta {
+  text-align: right;
+  line-height: 1.2;
+  border-right: 2px solid #EFC69B;
+  padding-right: 16px;
+  margin-right: 16px;
+}
+
+.post-body h2 {
+  margin-top: 8px;
+}
+
+.post-body img {
+  display: block;
+  margin: 0 auto;
+}
+
+.post {
+  margin-bottom: 24px;
+}
+
+main {
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
