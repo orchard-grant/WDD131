@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Card</title>
+    <link rel="stylesheet" href="card.css">
+    <script src="card.js" defer></script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Character Card Project">
+    <meta property="og:description" content="A dynamic character card built using JavaScript.">
+    <meta property="og:url" content="https://yourwebsite.com/charactercard">
+    <meta property="og:image" content="https://yourwebsite.com/images/character-preview.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Character Card Project">
+    <meta name="twitter:description" content="A dynamic character card built using JavaScript.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/character-preview.png">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+</head>
+<body>
+    <main class="card">
+        <img id="character-image" class="image" alt="Character image"/>
+        <h1 id="character-name" class="name"></h1>
+        <div class="stats">
+            <p><strong>Class:</strong> <span id="character-class"></span></p>
+            <p><strong>Level:</strong> <span id="character-level"></span></p>
+            <p><strong>Health:</strong> <span id="character-health"></span></p>
+        </div>
+        <div class="buttons">
+            <button id="attack-btn">Attack</button>
+            <button id="levelup-btn">Level Up</button>
+        </div>
+    </main>
+</body>
+</html>
