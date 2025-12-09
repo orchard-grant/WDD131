@@ -107,17 +107,7 @@ header nav a { display: block; text-align: center; }
   margin-top: 8px;
 }
 
-.post-body img {
-  display: block;
-  margin: 0 auto;
-}
-
 .post {
   margin-bottom: 24px;
 }
 
-main {
-  max-width: 992px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
