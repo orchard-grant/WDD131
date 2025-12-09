@@ -4,19 +4,19 @@ body {
     line-height: 1.6;
 }
 
-
-header > h1 {
+.title h1 {
     font-family: 'Times New Roman', serif;
     font-weight: bold;
     text-align: center;
     letter-spacing: 2.2px;
+    margin-bottom: -10px;
 }
 
-header > h2 {
+.title h2 {
     text-align: center;
     font-size: 15px;
     letter-spacing: 2px;
-    color: #3B6EAB;
+    color: #006EB6;
     text-transform: uppercase;
     display: inline-block;
     border-bottom: 1px solid #ddd;
@@ -24,27 +24,25 @@ header > h2 {
     margin-bottom: 20px;
 }
 
-header {
+.title {
     text-align: center;
 }
 
-.intro {
+.content p {
     max-width: 660px;
     margin: 0 auto 15px;
 }
 
-.italisize {
-    max-width: 660px;
+.content em {
     font-style: italic;
-    margin: 0 auto 15px;
 }
 
-ol {
+.does-list {
     max-width: 660px;
     margin: 0 auto;
 }
 
-li {
+.does-list li {
     margin-bottom: 15px;
 }
 
@@ -53,11 +51,26 @@ li {
   color: white;
 }
 
-.dark header h1 {
+.dark .title h1 {
   color: white;
 }
 
-.dark ol li,
+.dark .does-list li,
 .dark p {
   color: white;
+}
+
+.logo {
+    max-width: 120px;
+    display: block;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px 50px;
+    background-color: transparent;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
 }

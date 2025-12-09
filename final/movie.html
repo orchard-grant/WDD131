@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GrantBoxd | Movies</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>GrantBoxd</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="movie.html">Movies</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>All Movies</h2>
+
+    <div class="controls">
+      <input placeholder="Search..." id="searchInput" />
+      <select id="genreFilter">
+        <option value="">All Genres</option>
+        <option>Sci-Fi</option>
+        <option>Action</option>
+        <option>Drama</option>
+      </select>
+    </div>
+
+    <div id="movieContainer" class="movie-grid"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 GrantBoxd</p>
+  </footer>
+
+  <script type="module" src="js/render.js"></script>
+</body>
+</html>
