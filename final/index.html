@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="a movie database website, where users can view movies and my ratings on them">
   <title>GrantBoxd | Home</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script type="module" src="js/home.js" defer></script>
 </head>
 
-<body>
+<body class="home-page">
   <header>
     <h1>GrantBoxd</h1>
     <nav>
@@ -19,10 +21,14 @@
   <main>
     <section class="hero">
       <h2>Welcome to GrantBoxd</h2>
-      <p>Your personal collection of top movie picks.</p>
+      <p>My personal top movie picks, and movie searching database. This first page is a collection of my top movies, as well as why I love
+        these movies. I have seen so many movies, with over 600 movies logged on my LetterBoxd account, from which this site drew inspiration.
+        This first site shows my top movies, and how I would rate them. The next site if for you to search for movies, and to see their ratings based
+        on The Movie Database.
+      </p>
     </section>
 
-    <section>
+    <!-- <section>
       <h2>Featured Movie of the Day</h2>
       <div id="featuredMovie"></div>
     </section>
@@ -30,13 +36,17 @@
     <section>
       <h2>Top Movies</h2>
       <div id="topMovies" class="movie-grid"></div>
+    </section> -->
+
+    <section class="top-picks">
+      <h2>My Top Movies</h2>
+      
+      <div id="topPicks" class="movie-grid"></div>
     </section>
   </main>
 
   <footer>
     <p>© 2025 GrantBoxd</p>
   </footer>
-
-  <script type="module" src="js/home.js"></script>
 </body>
 </html>

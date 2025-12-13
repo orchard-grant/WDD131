@@ -1,41 +1,52 @@
-import { movies } from "./movies.js";
-
 const container = document.querySelector("#movieContainer");
 const searchInput = document.querySelector("#searchInput");
 const genreFilter = document.querySelector("#genreFilter");
 
-function renderMovies(list) {
-  container.innerHTML = "";
+async function getMovies(query){
+    const options = {
+    method: 'GET',
+    headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNWJmMWI2NDJlNzFmODA1OWVlNDhiZDVlMjQxZDY1YyIsIm5iZiI6MTcyMDQ5MjEyMS4zNjYwMDAyLCJzdWIiOiI2NjhjYTA1OTQ0MGNlNjc3NzcxNjhmNTgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.1jfpre8zLDnp1TBpFGE8smnKRxw7uDpxM51b1mUKcRA'
+  }
+};
 
+const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(query)}&include_adult=false&language=en-US&page=1`, 
+  options
+  );
+  const data = await response.json();
+  renderMoviesFromAPI(data.results);
+}
+
+function renderMoviesFromAPI(list){
+  container.innerHTML = "";
   list.forEach(movie => {
+    if (!movie.poster_path) return;
     const card = document.createElement("div");
     card.classList.add("movie-card");
 
     card.innerHTML = `
-      <img src="${movie.poster}" alt="${movie.title}">
-      <h3>${movie.title}</h3>
-      <p>${movie.year}</p>
-      <p>⭐ ${movie.rating}</p>
+    <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
+    <h3>${movie.title}<h3>
+    <p>${movie.release_date?.slice(0,4) ?? "N/A"}</p>
+    <p>⭐ ${movie.vote_average.toFixed(1)}</p>
     `;
 
     container.appendChild(card);
   });
 }
 
-renderMovies(movies);
 
-// SEARCH BAR
+// search
 searchInput.addEventListener("input", () => {
-  const value = searchInput.value.toLowerCase();
-  const filtered = movies.filter(m =>
-    m.title.toLowerCase().includes(value)
-  );
-  renderMovies(filtered);
+  const query = searchInput.value.trim();
+  
+  if(query.length < 2) {
+    container.innerHTML = "";
+    return;
+  }
+
+  getMovies(query);
 });
 
-// GENRE FILTER
-genreFilter.addEventListener("change", () => {
-  const value = genreFilter.value;
-  const filtered = value ? movies.filter(m => m.genre === value) : movies;
-  renderMovies(filtered);
-});
+getMovies("avengers");
