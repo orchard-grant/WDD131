@@ -1,13 +1,19 @@
+<!-- This is the html for my secondary page, which shows movies and is responsive, calling an API -->
+
 <!DOCTYPE html>
 <html lang="en">
+  <!-- loading in all meta tags -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GrantBoxd | Movies</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <script type="module" src="js/render.js" defer></script>
 </head>
-
+<!-- movie page class for movie grids in css -->
 <body class="movie-page">
   <header>
     <h1>GrantBoxd</h1>
@@ -16,12 +22,11 @@
       <a href="movie.html">Movies</a>
     </nav>
   </header>
-
   <main>
-    <h2>All Movies</h2>
-
+    <h2 class="pageheaders">All Movies</h2>
     <div class="controls">
       <input placeholder="Search..." id="searchInput" />
+      <!-- still working on filters, may not actually get it implemented -->
       <select id="genreFilter">
         <option value="">All Genres</option>
         <option>Sci-Fi</option>
@@ -29,10 +34,8 @@
         <option>Drama</option>
       </select>
     </div>
-
     <div id="movieContainer" class="movie-grid"></div>
   </main>
-
   <footer>
     <p>© 2025 GrantBoxd</p>
   </footer>

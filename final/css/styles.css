@@ -1,8 +1,15 @@
+/* importing in the fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   background: #ECE8E1;
   color: #1D1F18;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', system-ui, sans-serif;
 }
 
 header {
@@ -12,6 +19,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.pageheaders {
+  text-align: center;
 }
 
 nav a {
@@ -25,7 +36,7 @@ nav a {
   padding: 2rem;
   text-align: center;
 }
-
+/* setting the movie grid for the home page */
 .home-page .movie-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -33,7 +44,7 @@ nav a {
   padding: 1rem;
   align-items: start;
 }
-
+/* setting the movie grid for the MOVIES page, two different grids. This pattern follows all the way down */
 .movie-page .movie-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -74,6 +85,23 @@ nav a {
   display: block;
 }
 
+/* additional needed to get accessibility up on home page */
+
+.home-page #topPicks {
+  min-height: 600px;
+}
+
+.home-page .movie-card {
+  min-height: 320px;
+}
+
+.home-page .movie-card img {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+/* here is the end of that section i may need to delete */
+
 .home-page .movie-info {
   display: flex;
   flex-direction: column;
@@ -90,12 +118,17 @@ nav a {
   line-height: 1.5;
 }
 
+.movie-poster {
+  min-width: 150px;
+}
+
 .controls {
   display: flex;
   gap: 1rem;
   padding: 1rem;
 }
 
+/* media query to account for smaller devices */
 @media (max-width: 800px) {
 
   .home-page .movie-grid {
